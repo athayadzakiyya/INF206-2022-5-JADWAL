@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta charset="x-ua-compatible"content="IE-edge"/>
+	<title>login</title>
+	<link rel="Stylesheet" type="text/css" href="Style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"
+	/>
+
+</head>
+<body>
+	<div id="Card">
+		<div id="Card-content">
+			<div id="card-title">
+				<header>JADWALKU</header>
+				<h2>LOGIN</h2>
+				<div class="underline-title">
+					
+
+				</div>
+//index user
+			</div>
+			<form method="post" class="form">
+
+				<label for="user-id" style="padding-top: 13px">&nbsp;
+					ID
+				</label>
+
+				<input id="user-id" class="form-content" type="id"
+				name="id" autocomplete="on"required/>
+				<div class="form-border"></div>
+
+				
+				<label for="user-password" style="padding-top: 22px">&nbsp;
+					Password
+				</label>
+				
+
+				<input id="user-password" class="form-content" type="password"
+				name="password" required/>
+				<div class="form-border"></div>
+				<a href="">
+					<legend id="forgot-pass"> </legend>
+				</a>
+				<input type="login" name="MASUK" value="LOGIN">
+				<a href="index2.html">
+					<legend type="login-admin">login sebagai admin </legend>
+				</a>
+
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
