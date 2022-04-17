@@ -1,56 +1,186 @@
-<!DOCTYPE html>
+
+//index-user
+
+<<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta charset="x-ua-compatible"content="IE-edge"/>
 	<title>login</title>
-	<link rel="Stylesheet" type="text/css" href="Style.css">
+	<link rel="Stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"
 	/>
-
 </head>
 <body>
-	<div id="Card">
-		<div id="Card-content">
-			<div id="card-title">
-				<header>JADWALKU</header>
-				<h2>LOGIN</h2>
-				<div class="underline-title">
-					
+	<div class="container">
+		<center>
+			<h2>JADWAL</h2>
+		<h1>LOGIN</h1>
+		</center>
 
-				</div>
-//index user
-			</div>
-			<form method="post" class="form">
+		<form>
+			<label for="user-id" style="padding-top: 13px">&nbsp;
+			ID</label><br>
+			<input type="text" required/><br>
+			<div class="form-border"></div>
 
-				<label for="user-id" style="padding-top: 13px">&nbsp;
-					ID
-				</label>
+			<label for="user-password" style="padding-top: 13px">&nbsp;
+			PASSWORD</label><br>
+			<input type="password" required/><br>
+			<div class="form-border"></div>
 
-				<input id="user-id" class="form-content" type="id"
-				name="id" autocomplete="on"required/>
-				<div class="form-border"></div>
+			<center>
+			<button>MASUK</button>
+			</center>
 
-				
-				<label for="user-password" style="padding-top: 22px">&nbsp;
-					Password
-				</label>
-				
-
-				<input id="user-password" class="form-content" type="password"
-				name="password" required/>
-				<div class="form-border"></div>
-				<a href="">
-					<legend id="forgot-pass"> </legend>
+			<center>
+			<a href="index2.html">
+			<legend type="login-admin">login sebagai admin </legend>
 				</a>
-				<input type="login" name="MASUK" value="LOGIN">
-				<a href="index2.html">
-					<legend type="login-admin">login sebagai admin </legend>
-				</a>
+			</center>
 
 
-			</form>
-		</div>
+		</form>
 	</div>
 </body>
 </html>
+
+
+//index admin
+
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta charset="x-ua-compatible"content="IE-edge"/>
+	<title>login</title>
+	<link rel="Stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"
+	/>
+</head>
+<body>
+	<div class="container">
+		<center>
+			<h2>JADWAL</h2>
+		<h1>LOGIN</h1>
+		</center>
+
+		<form>
+			<label for="user-id" style="padding-top: 13px">&nbsp;
+			ID</label><br>
+			<input type="text" required/><br>
+			
+
+			<label for="user-password" style="padding-top: 13px">&nbsp;
+			PASSWORD</label><br>
+			<input type="password" required/><br>
+			
+
+			<center>
+			<button>MASUK</button>
+			</center>
+
+			<center>
+			<a href="index.html">
+			<legend type="login-admin">login sebagai user </legend>
+				</a>
+			</center>
+
+
+		</form>
+	</div>
+</body>
+</html>
+
+
+//style
+
+
+a{
+	text-decoration: none;
+}
+body{
+	margin: 200px auto;
+	width: 400px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background: #16a085;
+}
+label{
+	font-family: "Raleway", sans-serif;
+	font-size: 11pt;
+}
+#forgot -pass{
+	color: #ecf0f1;
+	font-family: "Raleway", sans-serif;
+	font-size: 10pt;
+	margin-top: 3px;
+	text-align: right;
+
+}
+#card{
+	background: #ecf0f1;
+	border-radius: 8px;
+	box-shadow: 1px 2px 8px rbgq(0,0,0,0.65);
+	height: 410px;
+	margin: 6rem auto 8.1rem auto;
+	width: 329px;
+}
+#card-content{
+	padding: 12px 44px;
+	color: ;
+}
+#card-title{
+	font-family: "Raleway Thin", sans-serif;
+	letter-spacing: 4px;
+	padding-bottom: 23px;
+	padding-top: 13px;
+	text-align: center;
+	color: #ecf0f1;
+}
+#signup{
+	color: #ecf0f1;
+	font-family: "Raleway",sans-serif;
+	font-size: 10pt;
+	margin-top: 16px;
+	text-align: center;
+}
+.form{
+	align-items: left;
+	display: flex;
+	flex-direction: column;
+}
+.form-border{
+	height: 1px;
+	width: 50px;
+	background: -webkit-linear-gradient(right,#ecf0f1,#bdc3c7);
+}
+.form-content{
+	background: #ecf0f1;
+	border: none;
+	padding-top: 14px;
+
+}
+.underline-title{
+	background: -webkit-linear-gradient(right,#ecf0f1,#bdc3c7);
+	height: 2px;
+	margin: -1.1rem auto 0 auto;
+	width: 89px;
+}
+input[type=login]{
+	margin: 5px auto;
+	padding: 10px;
+	width: 90px;
+	border: 1px solid #fff;
+	color: #34495e;
+	background:#1abc9c;
+	cursor: pointer;
+	text-align: center;
+
+
+}
+input[type=login-admin]{
+	margin: 5px auto;
+	padding: 10px;
+	text-align: center;
+}
