@@ -1,4 +1,4 @@
-header{
+ header{
     position: absolute;
     top: 0;
     left: 0;
@@ -25,6 +25,7 @@ header{
     text-decoration: none;
     font-size: 20px;
     color: #fff;
+     font-family: sans-serif;
 }
 
 header .navigation{
@@ -107,4 +108,38 @@ header .navigation li a{
 
 .container{
     margin-top: 100px;
+     font-family: sans-serif;
+}
+
+
+.table1{
+    position: relative;
+    top: 100px;
+    font-family: sans-serif;
+    color: #232323;
+    padding: 8px 20px;
+    width: 1300px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+}
+ input[type=submit] {
+    font-family: sans-serif;
+    font-size: 15px;
+    background: #006c1e;
+    color: white;
+    border: white 3px solid;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    position: absolute;
+    left: 1200px;
+
+    text-decoration: none;
+ }
+ .rectangle {
+    display: grid;
+    width: 1330px;
+    height: 500px;
+    background: #6b8b40;
 }
