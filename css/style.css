@@ -168,3 +168,14 @@ header .navigation li a{
     color: white;
     padding: 5px 10px;
 }
+
+.aksiedit{
+    font-family: sans-serif;
+    font-size: 15px;
+    background: #6b8b40;
+    color: white;
+    padding: 7px 25px;
+    position: relative;
+    left: 1310px;
+    top:13px;
+}
