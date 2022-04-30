@@ -1,5 +1,5 @@
  header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -88,6 +88,7 @@ header .navigation li a{
     border-radius: 10px;
     text-align: center;
     padding-bottom: 15px;
+    color: black;
 }
 
 .side-bar:target{
@@ -118,7 +119,7 @@ header .navigation li a{
     font-family: sans-serif;
     color: #232323;
     padding: 8px 20px;
-    width: 1300px;
+    width: 95%;
     text-align: left;
     background-color: white;
     border-radius: 10px;
@@ -138,7 +139,7 @@ header .navigation li a{
  }
  .rectangle {
     display: grid;
-    width: 1330px;
+    width: 100%;
     height: 500px;
     background: #6b8b40;
     border-radius: 5px;
