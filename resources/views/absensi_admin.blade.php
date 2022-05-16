@@ -57,56 +57,33 @@
                             <td align="center">NAMA</td>
                             <td align="center">STATUS</td>
                         </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
+          @foreach($absensi_admin as $status)
+                         <tr>
+                         <td>
+                        <center> @if($status->waktu == 1) 08:00 - 12:00
+                         @elseif($status->waktu == 2) 12:00 - 16:00
+                         @elseif($status->waktu == 3) 16:00 - 20:00
+                         @elseif($status->waktu == 4) 20:00 - 00:00
+                         @elseif($status->waktu == 5) 00:00 - 04:00
+                         @elseif($status->waktu == 6) 04:00 - 08:00
+                         @endif
+                        </center>
+                         </td>
+                         <td><center>{{ $status->user->nama }}</center></td>
+                         <td>
+                        <center>
+                         @if($status->is_absen == 0)
+                         <!-- <a href="" class="belumabsen" role="button" data-bs-toggle="button">belum absen</a> -->
+                         <button type="button" class="belumabsen">belum absen</button>
+                         <button type="button" class="tolakabsen">terima absen</button>
+                         @elseif($status->is_absen == 1)
+                         <button type="button" class="sudahabsen">SUCCESS</button>
+                         <button type="button" class="tolakabsen">tolak absen</button>
+                         @endif
+                         </center>
+                         </td>
                         </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
-                        <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td align="center"><button class="belumabsen">BELUM ABSEN</button><button class="sudahabsen">SUDAH ABSEN</button><button class="tolakabsen">TOLAK ABSEN</button></td>
-                        </tr>
+                        @endforeach
                 </thead>
             </ul>
         </table>
