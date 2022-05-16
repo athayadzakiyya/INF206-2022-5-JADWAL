@@ -57,10 +57,11 @@
     <table>
         <tbody>
             <tr>
-                <td align="right"><button class="aksiedit">EDIT</button></td>
+                <td align="right"><a href="http://localhost/phpmyadmin/index.php?route=/sql&server=1&db=project-absen&table=jadwal&pos=0" class="aksiedit" role="button" data-bs-toggle="button">EDIT</a></td>
             </tr>
         </tbody>
     </table>
+    <br>
     <table class="table2" align="center">
         <table border="1" cellspacing="3" cellpadding="25" align="center" width="1300">
 
@@ -69,75 +70,35 @@
 
                     <body>
                         <tr>
-                            <td>HARI/WAKTU</td>
-                            <td>Senin</td>
-                            <td>Selasa</td>
-                            <td>Rabu</td>
-                            <td>Kamis</td>
-                            <td>Jumat</td>
-                            <td>Sabtu</td>
-                            <td>Minggu</td>
+                        <td>HARI/WAKTU</td>
+                            <td>SENIN</td>
+                            <td>SELASA</td>
+                            <td>RABU</td>
+                            <td>KAMIS</td>
+                            <td>JUMAT</td>
+                            <td>SABTU</td>
+                            <td>MINGGU</td>
                         </tr>
+                        <?php $__currentLoopData = $absen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $list): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <?php if($list[0] == 1): ?> 08:00 - 12:00
+                                <?php elseif($list[0] == 2): ?> 12:00 - 16:00
+                                <?php elseif($list[0] == 3): ?> 16:00 - 20:00
+                                <?php elseif($list[0] == 4): ?> 20:00 - 00:00
+                                <?php elseif($list[0] == 5): ?> 00:00 - 04:00
+                                <?php elseif($list[0] == 6): ?> 04:00 - 08:00
+                                <?php endif; ?>
+                            </td>
+                            <td><?php echo e($list[1]); ?></td>
+                            <td><?php echo e($list[2]); ?></td>
+                            <td><?php echo e($list[3]); ?></td>
+                            <td><?php echo e($list[4]); ?></td>
+                            <td><?php echo e($list[5]); ?></td>
+                            <td><?php echo e($list[6]); ?></td>
+                            <td><?php echo e($list[7]); ?></td>
                         </tr>
-                        <tr>
-                            <td>12.00-16.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>16.00-20.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>20.00-00.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>00.00-04.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>04.00-08.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </body>
                 </thead>
             </ul>

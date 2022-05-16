@@ -57,12 +57,77 @@ class JadwalController extends Controller
 
     public function jadwalTenagaMedisAdmin()
     {
-        return view('jadwal_tenaga_medis_admin',[]);
+        $jadwal = Jadwal::all();
+        $hari = array('senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu');
+        $jam = array(1, 2, 3, 4, 5, 6);
+        // $absen = [
+        //     ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'],
+        //     ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'],
+        //     ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'],
+        //     ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'],
+        //     ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'],
+        // ];
+        $absen = [];
+        foreach($jam as $listJam){
+
+            $jamAbsen =[$listJam];
+            foreach($hari as $listHari){
+
+                $nama = null;
+                foreach($jadwal as $listJadwal){
+                    if($listJadwal->hari == $listHari && $listJadwal->waktu == $listJam){
+                        $nama = $listJadwal->user->nama;
+                    }
+                }
+                array_push($jamAbsen, $nama);
+            }
+            array_push($absen, $jamAbsen);
+        }
+        // dd($absen);
+
+        return view('jadwal_tenaga_medis_admin',[
+            'absen' => $absen
+        ]);
     }
 
     public function absensiAdmin()
     {
-        return view('absensi_admin',[]);
+            
+        $time = date("H:i");        
+
+        $date = date('l');
+        // dd($date);
+        if($date == 'Monday'){
+            $datecode = 'senin';
+        }elseif($date == 'Tuesday'){
+            $datecode = 'selasa';
+        }elseif($date == 'Wednesday'){
+            $datecode = 'rabu';
+        }elseif($date == 'Thursday'){
+            $datecode = 'kamis';
+        }elseif($date == 'Friday'){
+            $datecode = 'jumat';
+        }elseif($date == 'Saturday'){
+            $datecode = 'sabtu';
+        }elseif($date == 'Sunday'){
+            $datecode = 'minggu';
+        }
+        // $jadwal = Jadwal::all();
+        // $nama = Jadwal::where(user->nama);
+        // dd($datecode);
+        
+        // // panggil model jadwal
+        if($datecode){
+        $code = Jadwal::where('hari',$datecode)->get();
+        }else{
+            $code = null;
+        }
+        // dd($code);
+        return view('absensi_admin',[
+            'absensi_admin' => $code
+            // 'code' => Jadwal::where('hari',$datecode)->get()
+
+        ]);
     }
 
     public function absensi()

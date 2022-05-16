@@ -19,7 +19,7 @@ class UserController extends Controller
             if($masuk->password == $request->password){
                 session()->put('id', $masuk->id);
                 // dd(session('id'));
-                return redirect('/absensi');
+                return redirect('/jadwal_tenaga_medis');
             }else{
                 return redirect('/login');
             }
