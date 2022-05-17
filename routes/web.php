@@ -28,6 +28,10 @@ Route::get('/login', [UserController::class, 'loginUser']);
 
 Route::POST('/login_Proses_User', [UserController::class, 'loginProsesUser']);
 
+Route::get('/login', [UserController::class, 'loginAdmin']);
+
+Route::POST('/login_Proses_Admin', [UserController::class, 'loginProsesAdmin']);
+
 Route::get('/login_admin', function () {
     return view('login_admin');
 });
