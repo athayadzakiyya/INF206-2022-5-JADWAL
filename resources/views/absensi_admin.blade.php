@@ -58,7 +58,9 @@
                             <td align="center">NAMA</td>
                             <td align="center">STATUS</td>
                         </tr>
+
                          @foreach($absensi_admin as $status)
+
                          <tr>
                          <td>
                         <center> @if($status->waktu == 1) 08:00 - 12:00
@@ -85,7 +87,7 @@
                          </td>
                         </tr>
                         @endforeach
-                       
+
                 </thead>
             </ul>
         </table>
