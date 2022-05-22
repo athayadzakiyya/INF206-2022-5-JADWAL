@@ -13,24 +13,28 @@
     <div class="container">
         <center>
             <h2>JADWALKU</h2>
+            <h4><i> sistem jadwal dan absensi</i></h4>
             <h1>LOGIN</h1>
         </center>
 
-        <form method="GET" action="jadwal_tenaga_medis_admin">
+        <form method="POST" action="login_Proses_Admin">
+        @csrf
             <label for="user-id" style="padding-top: 13px">&nbsp; ID</label><br />
-            <input type="text" required /><br />
+            <input type="text" required name='userId'/><br />
+            <div class="form-border"></div>
 
             <label for="user-password" style="padding-top: 13px">&nbsp; PASSWORD</label
 				><br />
-				<input type="password" required /><br />
+				<input type="password" required name='password'/><br />
+                <div class="form-border"></div>
 
 				<center>
-					<a href="absensi_admin" target="_self"><button>MASUK</button></a>
+                    <button type="submit">MASUK </button>
 				</center>
 
 				<center>
 					<a href='login'>
-						<legend type="login-admin">login sebagai user</legend>
+						<legend type="login-user">login sebagai user</legend>
 					</a>
 				</center>
 			</form>

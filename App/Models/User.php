@@ -47,5 +47,10 @@ class User extends Authenticatable
         return $this->hasMany(Jadwal::class);
     }
 
+    public function ganti()
+    {
+        return $this->hasMany(Jadwal::class);
+    }
+
     
 }

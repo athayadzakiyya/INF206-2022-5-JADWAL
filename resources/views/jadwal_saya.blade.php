@@ -22,7 +22,7 @@
                 <a href="pemberitahuan">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="logout">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </a>
             </li>
@@ -89,7 +89,7 @@
                 @elseif($new->waktu == 6) 04:00 - 08:00
                 @endif
                 </td>
-                <td align="right"><button type="submit">GANTI</button>
+                <td align="right"><a href="ganti/{{$new->id}}"><button type="submit">GANTI</button></a>
                  </td>
             </tr>
             @endforeach

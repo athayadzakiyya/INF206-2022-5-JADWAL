@@ -16,7 +16,7 @@
         <ul class="navigation">
             <li>
                 <a href="pemberitahuan"><ion-icon name="notifications-outline"></ion-icon></a>
-                <a href="#"><ion-icon name="person-circle-outline"></ion-icon></a>
+                <a href="logout"><ion-icon name="person-circle-outline"></ion-icon></a>
             </li>
         </ul>
     </header>

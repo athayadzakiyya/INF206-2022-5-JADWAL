@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -16,7 +17,7 @@
         <ul class="navigation">
             <li>
                 <a href="pemberitahuan_admin"><ion-icon name="notifications-outline"></ion-icon></a>
-                <a href="#"><ion-icon name="person-circle-outline"></ion-icon></a>
+                <a href="logout_admin"><ion-icon name="person-circle-outline"></ion-icon></a>
             </li>
         </ul>
     </header>
@@ -57,7 +58,9 @@
                             <td align="center">NAMA</td>
                             <td align="center">STATUS</td>
                         </tr>
-          @foreach($absensi_admin as $status)
+
+                         @foreach($absensi_admin as $status)
+
                          <tr>
                          <td>
                         <center> @if($status->waktu == 1) 08:00 - 12:00
@@ -84,6 +87,7 @@
                          </td>
                         </tr>
                         @endforeach
+
                 </thead>
             </ul>
         </table>

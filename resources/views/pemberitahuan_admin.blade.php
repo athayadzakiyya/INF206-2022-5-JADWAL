@@ -22,7 +22,7 @@
                 <a href="#">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="logout_admin">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </a>
             </li>
@@ -61,20 +61,24 @@
 
             <body>
                 <tr>
-                    <th>Hari</th>
-                    <th>Waktu</th>
-
+                    <th>Jadwal Awal</th>
+                    <th>Jadwal Tujuan</th>
+                    <th>User</th>
+                    <th>Alasan</th>
                 </tr>
             </body>
         </thead>
         <tbody>
+            @foreach($notif_admin as $notif)
             <tr>
-                <td>senin </td>
-                <td>08:00-12:00 </td>
-                <td>Budi ingin mengganti jadwal dengan Usman </td>
+                <td>{{$notif->request_jadwal}}</td>
+                <td>{{$notif->purpose_jadwal}}</td>
+                <td>{{$notif->request_id}}</td>
+                <td>{{$notif->alasan}} </td>
                 <td align="right"><button class="aksiterima">Terima</button></td>
                 <td align="right"><button class="aksitolak">Tolak</button></td>
             </tr>
+            @endforeach
         </tbody>
     </table>
     <div class="rectangle"></div>
