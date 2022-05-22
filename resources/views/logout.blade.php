@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-         <a <button type="button" class="btn btn-light" href="login_admin">Keluar</button></a>
+         <a <button type="button" class="btn btn-light" href="login">Keluar</button></a>
          <a <button type="button" class="btn btn-light" href="">Batal</button></a>
         </li>
       </ul>

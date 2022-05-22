@@ -22,7 +22,7 @@
                 <a href="#">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="logout_admin">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </a>
             </li>

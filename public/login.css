@@ -1,9 +1,11 @@
 body {
     height: 100vh;
-    background: #bdc3c7;
+    background-image: url('back.jpg');
+    background-position: left;
+    /* background: #bdc3c7;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .container {

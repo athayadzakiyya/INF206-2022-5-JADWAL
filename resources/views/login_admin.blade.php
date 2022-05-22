@@ -13,6 +13,7 @@
     <div class="container">
         <center>
             <h2>JADWALKU</h2>
+            <h4><i> sistem jadwal dan absensi</i></h4>
             <h1>LOGIN</h1>
         </center>
 

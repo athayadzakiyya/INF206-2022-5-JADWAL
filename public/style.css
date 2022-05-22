@@ -10,6 +10,10 @@ header {
     background-color: #16a085;
 }
 
+body {
+    background-image: url('back.jpg');
+}
+
 .menu {
     position: relative;
     text-decoration: none;

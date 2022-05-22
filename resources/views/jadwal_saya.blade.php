@@ -22,7 +22,7 @@
                 <a href="pemberitahuan">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="logout">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </a>
             </li>
