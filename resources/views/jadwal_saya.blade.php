@@ -89,7 +89,7 @@
                 @elseif($new->waktu == 6) 04:00 - 08:00
                 @endif
                 </td>
-                <td align="right"><button type="submit">GANTI</button>
+                <td align="right"><a href="ganti/{{$new->id}}"><button type="submit">GANTI</button></a>
                  </td>
             </tr>
             @endforeach

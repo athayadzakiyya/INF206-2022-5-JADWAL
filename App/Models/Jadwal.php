@@ -14,4 +14,9 @@ class Jadwal extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function ganti()
+    {
+        return $this->hasMany(Ganti::class);
+    }
 }

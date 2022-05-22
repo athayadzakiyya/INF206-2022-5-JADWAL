@@ -1,0 +1,48 @@
+    div {
+        display: grid;
+        width: 70%;
+        height: 500px;
+        background: #072f27db;
+        border-radius: 5px;
+        margin: 20px auto;
+        padding-left: 30px;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    
+    .text {
+        display: grid;
+        width: 65%;
+        height: 380px;
+        background: #fafffedb;
+        border-radius: 5px;
+        margin: 20px auto;
+        position: relative;
+        bottom: 480px;
+    }
+    
+    .aksi1 {
+        font-family: sans-serif;
+        font-size: 15px;
+        width: 80px;
+        height: 25px;
+        background: #6c0900;
+        color: white;
+        padding: 5px 10px;
+        position: relative;
+        bottom: 485px;
+        left: 1000px;
+    }
+    
+    .aksi2 {
+        font-family: sans-serif;
+        font-size: 15px;
+        width: 80px;
+        height: 25px;
+        background: #006c1e;
+        color: white;
+        padding: 5px 10px;
+        position: relative;
+        bottom: 485px;
+        left: 1050px;
+    }

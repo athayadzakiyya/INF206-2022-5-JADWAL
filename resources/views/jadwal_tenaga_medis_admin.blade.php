@@ -22,7 +22,7 @@
                 <a href="pemberitahuan_admin">
                     <ion-icon name="notifications-outline"></ion-icon>
                 </a>
-                <a href="#">
+                <a href="logout_admin">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </a>
             </li>
@@ -57,10 +57,11 @@
     <table>
         <tbody>
             <tr>
-                <td align="right"><button class="aksiedit">EDIT</button></td>
+                <td align="right"><a href="http://localhost/phpmyadmin/index.php?route=/sql&server=1&db=project-absen&table=jadwal&pos=0" class="aksiedit" role="button" data-bs-toggle="button">EDIT</a></td>
             </tr>
         </tbody>
     </table>
+    <br>
     <table class="table2" align="center">
         <table border="1" cellspacing="3" cellpadding="25" align="center" width="1300">
 
@@ -69,75 +70,35 @@
 
                     <body>
                         <tr>
-                            <td>HARI/WAKTU</td>
-                            <td>Senin</td>
-                            <td>Selasa</td>
-                            <td>Rabu</td>
-                            <td>Kamis</td>
-                            <td>Jumat</td>
-                            <td>Sabtu</td>
-                            <td>Minggu</td>
+                        <td>HARI/WAKTU</td>
+                            <td>SENIN</td>
+                            <td>SELASA</td>
+                            <td>RABU</td>
+                            <td>KAMIS</td>
+                            <td>JUMAT</td>
+                            <td>SABTU</td>
+                            <td>MINGGU</td>
                         </tr>
+                        @foreach($absen as $list)
                         <tr>
-                            <td>08.00-12.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                @if($list[0] == 1) 08:00 - 12:00
+                                @elseif($list[0] == 2) 12:00 - 16:00
+                                @elseif($list[0] == 3) 16:00 - 20:00
+                                @elseif($list[0] == 4) 20:00 - 00:00
+                                @elseif($list[0] == 5) 00:00 - 04:00
+                                @elseif($list[0] == 6) 04:00 - 08:00
+                                @endif
+                            </td>
+                            <td>{{ $list[1] }}</td>
+                            <td>{{ $list[2] }}</td>
+                            <td>{{ $list[3] }}</td>
+                            <td>{{ $list[4] }}</td>
+                            <td>{{ $list[5] }}</td>
+                            <td>{{ $list[6] }}</td>
+                            <td>{{ $list[7] }}</td>
                         </tr>
-                        <tr>
-                            <td>12.00-16.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>16.00-20.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>20.00-00.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>00.00-04.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>04.00-08.00</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                        @endforeach
                     </body>
                 </thead>
             </ul>

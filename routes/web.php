@@ -20,55 +20,41 @@ Route::get('/', function () {
     return view('login');
 });
 
-// Route::get('/login', function () {
-//     return view('login');
+Route::get('/logout', function () {
+    return view('logout');
+});
+
+Route::get('/logout_admin', function () {
+    return view('logout_admin');
+});
+
+// Route::get('/login_admin', function () {
+//     return view('login_admin');
 // });
 
 Route::get('/login', [UserController::class, 'loginUser']);
 
+Route::get('/login_admin', [UserController::class, 'loginAdmin']);
+
 Route::POST('/login_Proses_User', [UserController::class, 'loginProsesUser']);
 
-Route::get('/login_admin', function () {
-    return view('login_admin');
-});
-
-// Route::get('/absensi', function () {
-//     return view('absensi');
-// });
+Route::POST('/login_Proses_Admin', [UserController::class, 'loginProsesAdmin']);
 
 Route::get('/absensi', [JadwalController::class, 'absensi']);
 
 Route::get('/absensi_admin', [JadwalController::class, 'absensiAdmin']);
 
 
-// Route::get('/jadwal_tenaga_medis', function () {
-//     return view('jadwal_tenaga_medis');
-// });
-
-// Route::get('/jadwal_tenaga_medis_admin', function () {
-//     return view('jadwal_tenaga_medis_admin');
-// });
-
 Route::get('/jadwal_tenaga_medis_admin', [JadwalController::class, 'jadwalTenagaMedisAdmin']);
 
 
-// Route::get('/bantuan', function () {
-//     return view('bantuan');
-// });
-
 Route::get('/bantuan', [NotifController::class, 'bantuan']);
 
+Route::get('/ganti/{id}', [NotifController::class, 'ganti']);
 
-// Route::get('/jadwal_saya', function () {
-//     return view('jadwal_saya');
-// });
+Route::post('/request', [NotifController::class, 'request']);
 
 Route::get('/jadwal_saya', [JadwalController::class, 'jadwalSaya']);
-
-
-// Route::get('/pemberitahuan_admin', function () {
-//     return view('pemberitahuan_admin');
-// });
 
 Route::get('/pemberitahuan_admin', [NotifController::class, 'pemberitahuanAdmin']);
 
