@@ -63,7 +63,7 @@
                 <tr>
                     <th>Jadwal Awal</th>
                     <th>Jadwal Tujuan</th>
-                    <th>User</th>
+                    <th>User ID</th>
                     <th>Alasan</th>
                 </tr>
             </body>
