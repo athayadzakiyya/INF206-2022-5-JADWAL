@@ -73,14 +73,14 @@
                          <td><center>{{ $status->user->nama }}</center></td>
                          <td>
                         <center>
-                         @if($status->is_absen == 0)
+                         
                          <!-- <a href="" class="belumabsen" role="button" data-bs-toggle="button">belum absen</a> -->
                          <button type="button" class="belumabsen">belum absen</button>
                          <button type="button" class="tolakabsen">terima absen</button>
-                         @elseif($status->is_absen == 1)
+                         
                          <button type="button" class="sudahabsen">SUCCESS</button>
                          <button type="button" class="tolakabsen">tolak absen</button>
-                         @endif
+                         
                          </center>
                          </td>
                         </tr>

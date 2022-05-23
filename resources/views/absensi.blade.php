@@ -81,7 +81,7 @@
             </body>
         </thead>
         <tbody>
-            @if($absensi)
+            
             @foreach($absensi as $absent)
             <tr>
                 <td><center>{{ $absent->hari }}</center></td>
@@ -98,14 +98,14 @@
                 </td>
                 <td>
                 <center>
-                @if($absent->is_absen == 0)<button type="button" is_absen = 1 class="btn btn-primary">absen</button>
-                @elseif($absent->is_absen == 1)<button type="button" is_absen = 1 class="btn btn-success">SUCCESS</button>
-                @endif
+                <a href="{{$absent == null}}"> <button onclick type="button" class="btn btn-primary">absen</button></a>
+                <!-- <button type="button" is_absen = 1 class="btn btn-success">SUCCESS</button> -->
+                
                 </center>
             </td>
             </tr>
             @endforeach
-            @endif
+           
         </tbody>
     </table>
     <div class="rectangle"></div>
