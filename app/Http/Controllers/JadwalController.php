@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Jadwal;
 
@@ -142,12 +142,14 @@ class JadwalController extends Controller
             $timecode = 2;
         }elseif("16:00" < $time && $time < "20:00"){
             $timecode = 3;
-        }elseif("20:00" < $time && $time < "00:00"){
+        }elseif("20:00" < $time && $time < "24:00"){
             $timecode = 4;
         }elseif("00:00" < $time && $time < "04:00"){
             $timecode = 5;
         }elseif("04:00" < $time && $time < "08:00"){
             $timecode = 6;
+        }else{
+            $timecode = null;
         }
 
         // dd($timecode);
