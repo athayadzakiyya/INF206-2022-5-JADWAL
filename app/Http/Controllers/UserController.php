@@ -11,6 +11,7 @@ class UserController extends Controller
         return view('login');
     }
 
+    
     public function loginProsesUser(Request $request){
         // dd($request);
         $masuk = User::where('id', $request->userId)->
@@ -19,7 +20,7 @@ class UserController extends Controller
             if($masuk->password == $request->password){
                 session()->put('id', $masuk->id);
                 // dd(session('id'));
-                return redirect('/jadwal_tenaga_medis');
+                return redirect('/absensi');
             }else{
                 return redirect('/login');
             }
@@ -27,4 +28,26 @@ class UserController extends Controller
             return redirect('/login');
         }
     }
+    
+    public function loginAdmin(){
+        return view('login_admin');
+    }
+
+    public function loginProsesAdmin(Request $request){
+        // dd($request);
+        $in = User::where('id', $request->userId)->
+        where('status', 'admin')->first();
+        if($in){
+            if($in->password == $request->password){
+                session()->put('id', $in->id);
+                // dd(session('id'));
+                return redirect('/absensi_admin');
+            }else{
+                return redirect('/login_admin');
+            }
+        }else{
+            return redirect('/login_admin');
+        }
+    }
+
 }
